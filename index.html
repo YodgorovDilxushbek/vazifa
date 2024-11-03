@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ro'yxatdan O'tish</title>
+    <style>
+      body {
+        display: flex;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        flex-direction: column;
+        gap: 50px;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: aqua;
+        background-image:url(./images/Najot_Talim-01.png);
+        background-size: cover;
+        background-position: center;
+      }
+
+      .form__container {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        width: 500px;
+        text-align: center;
+      }
+
+      .form__container h2 {
+        margin-bottom: 20px;
+      }
+form  input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #2a05fa;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.form__container button {
+  width: 100%;
+  padding: 10px;
+  background-color: #2a05fa;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+
+      .form__container button:hover {
+        background-color: #218838;
+      }
+
+      .cards {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .card {
+        border: 2px solid white;
+        text-align: center;
+        padding: 20px;
+        border-radius: 20px;
+        width: 300px;
+        background-color: white;
+        box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 20%);
+transition: all 0.5s linear;
+      }
+      .card:hover{
+        width: 310px;
+        box-shadow: 4px 4px 4px 3px rgb(0 0 0 / 20%);
+        background-color:#BC8F5B;
+        color: white;
+
+      }
+
+      .card .image {
+        margin-top: 10px;
+      }
+
+      .card .image img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+      }
+
+      .title h2 {
+        color: rgb(29, 29, 28);
+        font-size: 20px;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <div class="form__container">
+      <h2>Ro'yxatdan O'tish</h2>
+      <form id="registrationForm">
+        <input
+          type="text"
+          id="ism"
+          class="form-input"
+          placeholder="Ismingizni kiriting....."
+          required
+        />
+        <input
+          type="text"
+          id="familiya"
+          class="form-input"
+          placeholder="Familiyangizni kiriting......"
+          required
+        />
+        <input
+          type="tel"
+          id="telefon"
+          class="form-input"
+          placeholder="Nomeringizni kiriting...."
+          
+          required
+        />
+        <input
+          type="email"
+          id="email"
+          class="form-input"
+          placeholder="Emailingizni kiriting...."
+          required
+        />
+        <input
+          type="text"
+          id="rasm_url"
+          class="form-input"
+          placeholder="Rasm URL manzilini kiriting..."
+          required
+        />
+        <input type="submit" value="Ro'yxatdan o'tish" />
+      </form>
+    </div>
+    
+
+    <div class="cards" id="cardContainer">
+    </div>
+
+
+
+    <img id="loader" src="./images/loader.gif" alt="Loading..." style="display: none; width: 300px; height: 300px;"/> 
+    <script src="./js/script.js"></script>
+  </body>
+</html>
+
+
